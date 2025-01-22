@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthHub - Your Trusted Healthcare Partner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 1rem 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+        header nav ul li {
+            margin-left: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #3498db;
+            color: #3498db;
+        }
+        .hero {
+            background: #e6f3ff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 30%;
+            margin-right: 10px;
+        }
+        .services {
+            padding: 4rem 0;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .service-card {
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .specialists {
+            background: #f4f4f4;
+            padding: 4rem 0;
+        }
+        .specialists-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .specialist-card {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .testimonials {
+            padding: 4rem 0;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .testimonial-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .why-choose-us {
+            background: #e6f3ff;
+            padding: 4rem 0;
+        }
+        .why-choose-us-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .future-of-health {
+            padding: 4rem 0;
+        }
+        .future-of-health-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .newsletter {
+            background: #3498db;
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .newsletter input {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 4rem 0;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1>HealthHub</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#history">History</a></li>
+                </ul>
+                <div>
+                    <a href="#login" class="btn btn-outline">Log in</a>
+                    <a href="#signup" class="btn">Sign up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Find Your Ideal Healthcare Professional</h1>
+            <p>Connect with top-rated doctors and specialists in your area.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Location">
+                <input type="text" placeholder="Doctor's Name or Specialty">
+                <button class="btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/50" alt="Telemedicine">
+                    <h3>Telemedicine Consultations</h3>
+                    <p>Connect with healthcare professionals from the comfort of your home.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/50" alt="Medication Management">
+                    <h3>Medication Management</h3>
+                    <p>Keep track of your prescriptions and get timely refill reminders.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/50" alt="Cardiovascular Care">
+                    <h3>Cardiovascular Care</h3>
+                    <p>Comprehensive heart health services and monitoring.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/50" alt="Mental Wellness">
+                    <h3>Mental Wellness</h3>
+                    <p>Access to mental health resources and professional support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specialists">
+        <div class="container">
+            <h2>Our Consulting Specialists</h2>
+            <div class="specialists-grid">
+                <div class="specialist-card">
+                    <img src="https://via.placeholder.com/100" alt="Dr. Emily Chen">
+                    <h3>Dr. Emily Chen</h3>
+                    <p>Cardiologist</p>
+                </div>
+                <div class="specialist-card">
+                    <img src="https://via.placeholder.com/100" alt="Dr. Michael Johnson">
+                    <h3>Dr. Michael Johnson</h3>
+                    <p>Neurologist</p>
+                </div>
+                <div class="specialist-card">
+                    <img src="https://via.placeholder.com/100" alt="Dr. Sarah Thompson">
+                    <h3>Dr. Sarah Thompson</h3>
+                    <p>Pediatrician</p>
+                </div>
+                <div class="specialist-card">
+                    <img src="https://via.placeholder.com/100" alt="Dr. David Lee">
+                    <h3>Dr. David Lee</h3>
+                    <p>Oncologist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Members Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/50" alt="Sarah Johnson">
+                    <h3>Sarah Johnson</h3>
+                    <p>HealthHub has revolutionized how I manage my healthcare. The telemedicine consultations are so convenient, and the doctors are top-notch!</p>
+                    <small>05/15/23</small>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/50" alt="Michael Chen">
+                    <h3>Michael Chen</h3>
+                    <p>I've been using HealthHub for my family's medical needs, and it's been a game-changer. The ease of scheduling appointments and accessing our medical records is fantastic.</p>
+                    <small>04/22/23</small>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/50" alt="Emily Rodriguez">
+                    <h3>Emily Rodriguez</h3>
+                    <p>As someone with a chronic condition, HealthHub has made it so much easier to stay on top of my health. The medication management feature is particularly helpful.</p>
+                    <small>06/03/23</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose HealthHub?</h2>
+            <div class="why-choose-us-content">
+                <ul>
+                    <li>24/7 access to healthcare professionals</li>
+                    <li>Seamless integration of your medical records</li>
+                    <li>Personalized health recommendations</li>
+                    <li>Secure and confidential platform</li>
+                    <li>Wide network of specialists</li>
+                </ul>
+                <img src="https://via.placeholder.com/400x300" alt="Healthcare professionals">
+            </div>
+            <button class="btn">Learn More</button>
+        </div>
+    </section>
+
+    <section class="future-of-health">
+        <div class="container">
+            <h2>The Future of Quality Healthcare</h2>
+            <div class="future-of-health-content">
+                <img src="https://via.placeholder.com/500x400" alt="Future of healthcare">
+                <div>
+                    <p>At HealthHub, we're revolutionizing the way you access and manage your healthcare. Our platform combines cutting-edge technology with compassionate care to provide you with a seamless, personalized healthcare experience.</p>
+                    <p>From AI-powered symptom checkers to virtual reality rehabilitation programs, we're constantly innovating to bring you the best in modern healthcare. Our goal is to make quality healthcare accessible to everyone, anytime, anywhere.</p>
+                    <p>Join us in shaping the future of healthcare, where your well-being is just a click away.</p>
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Informed with HealthHub</h2>
+            <p>Subscribe to our newsletter for the latest health tips, medical breakthroughs, and exclusive offers from HealthHub. Your journey to better health starts here.</p>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>HealthHub</h3>
+                    <p>Your trusted partner in health and wellness.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect With Us</h4>
+                    <p>Follow us on social media for health tips and updates.</p>
+                    <!-- Add social media icons here -->
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #555;">
+                <p>&copy; 2023 HealthHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

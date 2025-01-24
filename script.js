@@ -1,72 +1,63 @@
+document.querySelectorAll('header nav ul li a').forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Handle form submission
-    const newsletterForm = document.querySelector('.newsletter form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('input[type="email"]');
-            if (emailInput && emailInput.value) {
-                alert(`Thank you for subscribing with email: ${emailInput.value}`);
-                emailInput.value = '';
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        });
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
     }
-    const navLinks = document.querySelectorAll('header nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
+});
 
-    // Toggle mobile menu
-    const menuToggle = document.createElement('button');
-    menuToggle.textContent = '☰';
-    menuToggle.className = 'menu-toggle';
-    const nav = document.querySelector('header nav');
-    nav.prepend(menuToggle);
-
-    menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('mobile-nav-active');
-    });
-
-    // Simple form validation for search
-    const searchForm = document.querySelector('.search-bar');
-    if (searchForm) {
-        searchForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const locationInput = this.querySelector('input[placeholder="Location"]');
-            const doctorInput = this.querySelector('input[placeholder="Doctor\'s Name or Specialty"]');
-            if (locationInput.value && doctorInput.value) {
-                alert(`Searching for ${doctorInput.value} in ${locationInput.value}`);
-            } else {
-                alert('Please fill in both location and doctor/specialty fields.');
-            }
-        });
+document.querySelector('.newsletter form').addEventListener('submit', event => {
+    const emailInput = document.querySelector('.newsletter input');
+    if (!emailInput.value || !emailInput.value.includes('@')) {
+        event.preventDefault();
+        alert('Please enter a valid email address.');
     }
-    const images = document.querySelectorAll('img');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                observer.unobserve(img);
-            }
-        });
-    });
+});
 
-    images.forEach(img => {
-        img.classList.add('lazy');
-        img.dataset.src = img.src;
-        img.src = '';
-        imageObserver.observe(img);
+document.querySelector('.search-bar button').addEventListener('click', () => {
+    const locationInput = document.querySelector('.search-bar input[type="text"]:first-of-type');
+    const specialtyInput = document.querySelector('.search-bar input[type="text"]:last-of-type');
+
+    if (!locationInput.value || !specialtyInput.value) {
+        alert('Please enter both a location and a doctor\'s name or specialty.');
+    } else {
+        alert(`Searching for doctors in ${locationInput.value} specializing in ${specialtyInput.value}`);
+    }
+});
+
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'scale(1.05)';
+        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+        card.style.boxShadow = 'none';
+    });
+});
+
+document.querySelectorAll('.specialist-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'scale(1.05)';
+        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+        card.style.boxShadow = 'none';
     });
 });

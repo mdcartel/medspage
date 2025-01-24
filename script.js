@@ -1,4 +1,4 @@
-// Wait for the DOM to be fully loaded
+
 document.addEventListener('DOMContentLoaded', function() {
     // Handle form submission
     const newsletterForm = document.querySelector('.newsletter form');
@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('header nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -53,8 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // Lazy loading for images
     const images = document.querySelectorAll('img');
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {

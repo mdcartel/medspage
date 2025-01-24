@@ -61,3 +61,7 @@ document.querySelectorAll('.specialist-card').forEach(card => {
         card.style.boxShadow = 'none';
     });
 });
+document.querySelector('a[href="#login"]').addEventListener('click', event => {
+    event.preventDefault(); 
+    window.location.href = 'login.html'; 
+});

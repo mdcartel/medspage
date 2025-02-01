@@ -1,67 +1,52 @@
-document.querySelectorAll('header nav ul li a').forEach(link => {
-    link.addEventListener('click', event => {
-        event.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
+document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("nav ul li a").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+     document.querySelector(".search-bar .btn").addEventListener("click", () => {
+        const locationInput = document.querySelector(".search-bar input:nth-child(1)").value;
+        const specialtyInput = document.querySelector(".search-bar input:nth-child(2)").value;
+
+        if (locationInput && specialtyInput) {
+            alert(`Searching for ${specialtyInput} in ${locationInput}...`);
+        } else {
+            alert("Please enter both location and specialty.");
         }
     });
-});
 
-const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
+       document.querySelectorAll(".btn").forEach(button => {
+        button.addEventListener("click", (e) => {
+            if (button.textContent === "Learn More") {
+                alert("More information coming soon!");
+            }
+        });
+    });
+
+     const newsletterForm = document.querySelector(".newsletter form");
+    if (newsletterForm) {
+        newsletterForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const emailInput = document.querySelector(".newsletter input").value;
+            if (validateEmail(emailInput)) {
+                alert("Thank you for subscribing!");
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
     }
-});
 
-document.querySelector('.newsletter form').addEventListener('submit', event => {
-    const emailInput = document.querySelector('.newsletter input');
-    if (!emailInput.value || !emailInput.value.includes('@')) {
-        event.preventDefault();
-        alert('Please enter a valid email address.');
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
     }
-});
-
-document.querySelector('.search-bar button').addEventListener('click', () => {
-    const locationInput = document.querySelector('.search-bar input[type="text"]:first-of-type');
-    const specialtyInput = document.querySelector('.search-bar input[type="text"]:last-of-type');
-
-    if (!locationInput.value || !specialtyInput.value) {
-        alert('Please enter both a location and a doctor\'s name or specialty.');
-    } else {
-        alert(`Searching for doctors in ${locationInput.value} specializing in ${specialtyInput.value}`);
-    }
-});
-
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'scale(1.05)';
-        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'scale(1)';
-        card.style.boxShadow = 'none';
-    });
-});
-
-document.querySelectorAll('.specialist-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'scale(1.05)';
-        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'scale(1)';
-        card.style.boxShadow = 'none';
-    });
-});
-document.querySelector('a[href="#login"]').addEventListener('click', event => {
-    event.preventDefault(); 
-    window.location.href = 'login.html'; 
 });

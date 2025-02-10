@@ -1,85 +1,212 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #E3F2FD;
 }
 
+/* Header Styles */
 header {
-  background-color: #f4f4f4;
-  padding: 20px;
-  text-align: center;
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
 }
 
 nav .logo {
-  font-size: 24px;
+  font-size: 2em;
   font-weight: bold;
+  color: #1E88E5;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #424242;
+  font-size: 1.1em;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.auth-buttons .login {
+  background-color: white;
+  color: #1E88E5;
+  border: 1px solid #1E88E5;
+}
+
+.auth-buttons .signup {
+  background-color: #1E88E5;
+  color: #ffffff;
+}
+
+/* Hero Section Styles */
+.hero-container {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #E3F2FD;
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.hero img {
   width: 100%;
-  max-width: 1200px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.hero form {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hero input {
-  padding: 10px;
-  width: 200px;
+.hero-text {
+  flex: 1;
+  max-width: 55%;
 }
 
-.hero button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+.hero-text h1 {
+  font-size: 3.7em;
+  color: #212121;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-text .highlight {
+  color: #1E88E5;
+  text-decoration: underline;
+  text-decoration-color: #BBDEFB;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.1em;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  color: #616161;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  margin-left: 0px;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #BDBDBD;
+  border-radius: 40px;
+  padding: 10px 15px;
+  flex: 1;
+}
+
+.search-input i {
+  margin-right: 10px;
+  color: #757575;
+  font-size: 1.3em;
+}
+
+.search-input select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.1em;
+  color: #424242;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23757575' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 100%;
+}
+
+.search-bar .search-button {
+  padding: 15px 30px;
+  background-color: #1E88E5;
+  color: #ffffff;
   border: none;
   cursor: pointer;
+  border-radius: 40px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
 }
 
+.search-bar .search-button i {
+  font-size: 1.3em;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Vertically center the image */
+}
+
+.hero-image img {
+  max-height: 60vh; /* Adjusted max-height to make it smaller */
+  width: auto;
+}
+/* Align the hero text to the left */
+.hero-container .hero {
+  align-items: flex-start;
+}
+
+.hero-container .hero .hero-text {
+  text-align: left;
+  margin-left: 0px;  /*Shift hero-text to the left */
+}
+
+.hero-container .hero .hero-text h1,
+.hero-container .hero .hero-text p{
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+/* Services Section */
 .services {
   padding: 50px 20px;
   text-align: center;
@@ -174,22 +301,7 @@ nav ul li a {
   margin: 10px 0;
 }
 
-.testimonials h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.testimonial img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.stats {
-  font-size: 18px;
-}
-
+/* Why Choose Us Section */
 .why-choose-us {
   padding: 50px 20px;
   text-align: center;
@@ -212,10 +324,10 @@ nav ul li a {
   border-radius: 5px;
 }
 
+/* Future Health Section */
 .future-health {
   padding: 50px 20px;
   text-align: center;
-  background-color: #f4f4f4;
 }
 
 .future-health img {
@@ -226,6 +338,7 @@ nav ul li a {
   margin-bottom: 20px;
 }
 
+/* Newsletter Section */
 .newsletter {
   padding: 50px 20px;
   text-align: center;
@@ -255,6 +368,7 @@ nav ul li a {
   cursor: pointer;
 }
 
+/* Footer Section */
 footer {
   background-color: #333;
   color: white;
@@ -293,5 +407,10 @@ footer {
 }
 
 .footer-section ul li a:hover {
-  color: #007bff; /* Change link color on hover */
+  color: #007bff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
 }

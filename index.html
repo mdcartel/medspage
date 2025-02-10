@@ -3,115 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Your Favourite Doctor</title>
+    <title>E-sheba - Medical Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="logo">E-sheba</div>
         <nav>
+            <div class="logo">E-sheba</div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Application</a></li>
                 <li><a href="#">History</a></li>
-                <li><a href="#">Log in</a></li>
-                <li><a href="#">Sign up</a></li>
             </ul>
+            <div class="auth-buttons">
+                <button class="login">Log in</button>
+                <button class="signup">Sign up</button>
+            </div>
         </nav>
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Find & Search Your Favourite Doctor</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.</p>
-                <form>
-                    <input type="text" placeholder="Doctor’s Name">
-                    <input type="text" placeholder="Location">
-                    <button type="submit"><i class="fa fa-search"></i> Search</button>
-                </form>
-            </div>
-            <img src="images/vaibhav-vivian-3HIroMoyre8-unsplash.jpg" alt="Doctor Image Placeholder">
-        </div>
     </header>
-
-    <!-- Services Section -->
-    <section class="services">
-        <h2>Our Consulting Specialists</h2>
-        <div class="service-cards">
-            <div class="card">
-                <img src="images/hush-naidoo-jade-photography-yo01Z-9HQAw-unsplash.jpg" alt="Covid-19 Test Icon">
-                <h3>Covid-19 Test</h3>
-                <p>Get tested for Covid-19 at our certified labs. Fast, reliable, and safe testing with quick results.</p>
-            </div>
-            <div class="card">
-                <img src="images/marcelo-leal-6pcGTJDuf6M-unsplash.jpg" alt="Supplement Icon">
-                <h3>Supplements</h3>
-                <p>Explore our range of health supplements to boost your immunity and overall well-being.</p>
-            </div>
-            <div class="card">
-                <img src="images/robina-weermeijer-NIuGLCC7q54-unsplash.jpg" alt="Heart Lungs Icon">
-                <h3>Heart & Lungs</h3>
-                <p>Specialized care for heart and lung conditions. Our experts are here to help you breathe and live better.</p>
-            </div>
-            <div class="card">
-                <img src="images/drew-hays-tGYrlchfObE-unsplash.jpg" alt="Mental Health Icon">
-                <h3>Mental Health</h3>
-                <p>Your mental health matters. Consult with our psychologists and psychiatrists for personalized care.</p>
-            </div>
+    <main>
+        <!-- Hero Section -->
+        <div class="hero-container">
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Link up with the best and your <span class="highlight">Favourite</span> Doctor</h1>
+                    <p>We offer the best services and we have your favourite doctors in the industry</p>
+                    <div class="search-bar">
+                        <div class="search-input">
+                            <i class="fas fa-user-doctor"></i>
+                            <select>
+                                <option>Doctor's Name</option>
+                            </select>
+                        </div>
+                        <div class="search-input">
+                            <i class="fas fa-location-dot"></i>
+                            <select>
+                                <option>Location</option>
+                            </select>
+                        </div>
+                        <button class="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/vaibhav-vivian-3HIroMoyre8-unsplash.jpg" alt="Doctor">
+                </div>
+            </section>
         </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>What Our Members Are Saying</h2>
-        <div class="testimonial-avatars">
-            <img src="images/amusing-1299761_640.webp" alt="Avatar 1">
-            <img src="images/child-1837375_640.webp" alt="Avatar 2">
-            <img src="images/female-306407_640.webp" alt="Avatar 3">
-            <img src="images/man-156584_640.webp" alt="Avatar 4">
-            <img src="images/woman-7854120_640.webp" alt="Avatar 5">
-            <img src="images/nurse-37322_640.webp" alt="Avatar 6">
-        </div>
-        <div class="stats">
-            <p>100+ Reviews</p>
-        </div>
-        <div class="review-card">
-            <img src="images/WhatsApp Image 2024-11-28 at 21.00.29.jpeg" alt="Jane Cooper">
-            <p><strong>Mark David</strong> - 12/4/17</p>
-            <div class="rating">
-                ★★★★★
+        <!-- Services Section -->
+        <section class="services">
+            <h2>Our Consulting Specialists</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <img src="images\hush-naidoo-jade-photography-yo01Z-9HQAw-unsplash.jpg" alt="Covid-19 Test Icon">
+                    <h3>Covid-19 Test</h3>
+                    <p>Get tested for Covid-19 at our certified labs. Fast, reliable, and safe testing with quick results.</p>
+                </div>
+                <div class="card">
+                    <img src="images\marcelo-leal-6pcGTJDuf6M-unsplash.jpg" alt="Supplement Icon">
+                    <h3>Supplements</h3>
+                    <p>Explore our range of health supplements to boost your immunity and overall well-being.</p>
+                </div>
+                <div class="card">
+                    <img src="images\robina-weermeijer-NIuGLCC7q54-unsplash.jpg" alt="Heart Lungs Icon">
+                    <h3>Heart & Lungs</h3>
+                    <p>Specialized care for heart and lung conditions. Our experts are here to help you breathe and live better.</p>
+                </div>
+                <div class="card">
+                    <img src="images\drew-hays-tGYrlchfObE-unsplash.jpg" alt="Mental Health Icon">
+                    <h3>Mental Health</h3>
+                    <p>Your mental health matters. Consult with our psychologists and psychiatrists for personalized care.</p>
+                </div>
             </div>
-            <p>"E-sheba made it so easy to find a doctor near me. The service was fast, and the doctor was very professional."</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <h2>Why You Choose Us?</h2>
-        <p>We are committed to providing high-quality healthcare services tailored to your needs.</p>
-        <p>Our platform is easy to use, and our doctors are highly qualified and experienced.</p>
-        <p>We offer a wide range of medical services, from general checkups to specialized treatments.</p>
-        <p>Your health and well-being are our top priorities.</p>
-        <a href="#" class="btn">Learn More</a>
-    </section>
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>What Our Members Are Saying</h2>
+            <div class="testimonial-avatars">
+                <img src="images\amusing-1299761_640.webp" alt="Avatar 1">
+                <img src="images\child-1837375_640.webp" alt="Avatar 2">
+                <img src="images\female-306407_640.webp" alt="Avatar 3">
+                <img src="images\man-156584_640.webp" alt="Avatar 4">
+                <img src="images\woman-7854120_640.webp" alt="Avatar 5">
+                <img src="images\nurse-37322_640.webp" alt="Avatar 6">
+            </div>
+            <div class="stats">
+                <p>100+ Reviews</p>
+            </div>
+            <div class="review-card">
+                <img src="images\WhatsApp Image 2024-11-28 at 21.00.29.jpeg" alt="Jane Cooper">
+                <p><strong>Mark David</strong> - 12/4/17</p>
+                <div class="rating">
+                    ★★★★★
+                </div>
+                <p>"E-sheba made it so easy to find a doctor near me. The service was fast, and the doctor was very professional."</p>
+            </div>
+        </section>
 
-    <!-- Future of Health Section -->
-    <section class="future-health">
-        <h2>The Future of Quality Health</h2>
-        <img src="images/piron-guillaume-kJwZxH6jins-unsplash.jpg" alt="Future Health Image">
-        <p>At E-sheba, we are revolutionizing healthcare by making it more accessible, affordable, and efficient. Our goal is to ensure that everyone has access to the best medical care, anytime and anywhere.</p>
-        <a href="#" class="btn">Learn More</a>
-    </section>
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <h2>Why You Choose Us?</h2>
+            <p>We are committed to providing high-quality healthcare services tailored to your needs.</p>
+            <p>Our platform is easy to use, and our doctors are highly qualified and experienced.</p>
+            <p>We offer a wide range of medical services, from general checkups to specialized treatments.</p>
+            <p>Your health and well-being are our top priorities.</p>
+            <a href="#" class="btn">Learn More</a>
+        </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <h2>Subscribe To Our Newsletter</h2>
-        <p>Stay updated with the latest health tips, news, and exclusive offers from E-sheba. Subscribe to our newsletter today!</p>
-        <form>
-            <input type="email" placeholder="Enter your email">
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
+        <!-- Future of Health Section -->
+        <section class="future-health">
+            <h2>The Future of Quality Health</h2>
+            <img src="images\piron-guillaume-kJwZxH6jins-unsplash.jpg" alt="Future Health Image">
+            <p>At E-sheba, we are revolutionizing healthcare by making it more accessible, affordable, and efficient. Our goal is to ensure that everyone has access to the best medical care, anytime and anywhere.</p>
+            <a href="#" class="btn">Learn More</a>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <h2>Subscribe To Our Newsletter</h2>
+            <p>Stay updated with the latest health tips, news, and exclusive offers from E-sheba. Subscribe to our newsletter today!</p>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
@@ -119,7 +141,9 @@
             <div class="footer-section">
                 <h3>E-sheba</h3>
                 <p>123 Health Street, Wellness City, WC 4567</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127645.13740377784!2d36.880384!3d-1.2222464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1738683891929!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127645.13740377784!2d36.880384!3d-1.2222464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1738683891929!5m2!1sen!2ske"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="footer-section">
                 <h3>Useful Links</h3>

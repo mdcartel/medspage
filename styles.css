@@ -190,6 +190,7 @@ nav ul li a {
   max-height: 60vh; /* Adjusted max-height to make it smaller */
   width: auto;
 }
+
 /* Align the hero text to the left */
 .hero-container .hero {
   align-items: flex-start;
@@ -201,11 +202,12 @@ nav ul li a {
 }
 
 .hero-container .hero .hero-text h1,
-.hero-container .hero .hero-text p{
+.hero-container .hero .hero-text p {
   margin-left: 0;
   margin-right: auto;
   text-align: left;
 }
+
 /* Services Section */
 .services {
   padding: 50px 20px;
@@ -376,41 +378,3 @@ footer {
   text-align: center;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.footer-section {
-  flex: 1;
-  padding: 20px;
-}
-
-.footer-section h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-.footer-section ul li a:hover {
-  color: #007bff;
-}
-
-.footer-bottom {
-  margin-top: 20px;
-  font-size: 14px;
-}
